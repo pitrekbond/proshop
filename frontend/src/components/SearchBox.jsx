@@ -4,8 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function SearchBox() {
   const navigate = useNavigate();
-  //   const { keyword: urlKeyword } = useParams();
-  const [keyword, setKeyword] = useState("");
+  const { keyword: urlKeyword } = useParams();
+  const [keyword, setKeyword] = useState(urlKeyword || "");
 
   function submitHandler(e) {
     e.preventDefault();
